@@ -1,0 +1,7 @@
+{
+  "name": "MART BUILDERS - Government Contractor & Construction",
+  "description": "Professional corporate portal for MART BUILDERS, a premier government contractor in Bangladesh specializing in infrastructure development, consultancy, and construction services.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
