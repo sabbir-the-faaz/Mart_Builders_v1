@@ -9,13 +9,49 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --navy: #0B2A4A;
+            --steel: #2F6FA3;
+            --gold: #F2B705;
+            --bg: #F7F9FB;
+            --text: #1F2933;
+        }
         body {
             font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            -webkit-font-smoothing: antialiased;
         }
-        .font-display {
-            font-family: 'Playfair+Display', serif;
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+        }
+        .glass-nav-dark {
+            background: rgba(11, 42, 74, 0.95);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+        }
+        .outline-text {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+            color: transparent;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0B2A4A;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2F6FA3;
         }
     </style>
 <script type="importmap">
@@ -27,13 +63,14 @@
     "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
     "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
     "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
     "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
-    "vite": "https://esm.sh/vite@^7.3.1"
+    "framer-motion": "https://esm.sh/framer-motion@^12.29.2"
   }
 }
 </script>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-[#F7F9FB] text-[#1F2933] selection:bg-[#F2B705] selection:text-white">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
 </body>
